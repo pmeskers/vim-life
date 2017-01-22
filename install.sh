@@ -11,13 +11,13 @@ fi
 # take out the trash
 rm -rf ~/.vim
 rm -f ~/.vimrc
+rm -f ~/.vimrc.local
 
 # install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # link our vim configurations
-cd `dirname $0`
 ln -s `pwd`/vimrc ~/.vimrc
 ln -s `pwd`/init ~/.vim/init
 
@@ -28,15 +28,15 @@ touch ~/.vimrc.local
 vim -c ":PlugInstall" -c ":qa!"
 
 # copy our local starting template
-read -r -p "Create a ~/.vimrc.local configuration from template? (y/n) " response
-if [[ "$response" =~ ^([yY])+$ ]]; then
-  cp `pwd`/vimrc.local.template ~/.vimrc.local
-fi
+cp `pwd`/vimrc.local.template ~/.vimrc.local
+
+# install YouCompleteMe
+brew install cmake
+cd ~/.vim/plugged/YouCompleteMe
+./install.py
 
 # change iTerm colorscheme
 printf "\n\nnote: if using the nord-vim colorscheme, iTerm accompaniment recommended!"
 printf "\nnord-iterm2: https://raw.githubusercontent.com/arcticicestudio/nord-iterm2/master/src/xml/Nord.itermcolors"
 
-
 printf "\n\nDone!"
-
