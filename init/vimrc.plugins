@@ -1,0 +1,55 @@
+" Plugin management using vim-plug https://github.com/junegunn/vim-plug
+
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" General settings
+Plug 'tpope/vim-sensible'
+
+" File management
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+
+" Text editing
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'YankRing.vim'
+" Plug 'Valloric/YouCompleteMe'
+
+" UI modifications
+Plug 'vim-airline/vim-airline'
+
+" Integrations
+Plug 'sjl/vitality.vim'
+Plug 'airblade/vim-gitgutter'
+
+" Colorschemes
+Plug 'freeo/vim-kalisi'
+Plug 'arcticicestudio/nord-vim'
+
+" Languages/Libraries
+Plug 'flowtype/vim-flow'
+
+" Initialize plugin system
+call plug#end()
+
+" Plugin requirements
+filetype plugin on
+
+" Nerdtree settings
+map \      :NERDTreeToggle<CR>
+map \|     :NERDTreeFind<CR>
+
+" Nerdcommenter settings
+map <leader>/  <plug>NERDCommenterToggle
+
+" YankRing settings
+let g:yankring_replace_n_pkey = '<C-Tab>'
+let g:yankring_replace_n_nkey = '<C-S-Tab>'
+
+" Ctrl-P settings
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" vim-flow settings (JS typing)
+let g:flow#flowpath = './node_modules/.bin/flow'

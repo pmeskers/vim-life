@@ -1,0 +1,6 @@
+" Visual settings
+colorscheme nord
+
+" MacVim settings
+set guifont=Monaco:h16    " font/size
+set guioptions-=rL        " remove scrollbars
