@@ -5,6 +5,9 @@ set wildmenu
 " Map spacebar to clear highlighting
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 
+" Map <leader>C to copy current file path
+map <leader>C :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+
 " General settings
 let mapleader = ","     " Use comma as leader
 
