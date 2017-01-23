@@ -2,6 +2,9 @@
 set wildmode=longest,list,full
 set wildmenu
 
+" Map spacebar to clear highlighting
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
+
 " General settings
 let mapleader = ","     " Use comma as leader
 
