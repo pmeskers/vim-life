@@ -1,6 +1,13 @@
 # exit on error
 set -e
 
+# sanity check directory
+if [[ `pwd` != *vim-life ]]
+then
+  echo 'hey, you gotta run this from the vim-life directory. sorry.'
+  exit
+fi
+
 # double-check
 read -r -p "This will blow away any existing ~/.vim and ~/.vimrc. Are you sure? (y/n) " response
 if [[ "$response" =~ ^([nN])+$ ]]; then
