@@ -13,4 +13,3 @@ git pull -r
 
 # run vim and install our plugins
 vim -c ":PlugInstall" -c ":qa!"
-vim -c ":source ~/.vimrc" -c ":qa!"
