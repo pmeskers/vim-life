@@ -28,6 +28,8 @@ Plug 'tpope/vim-fugitive'
 " Colorschemes
 Plug 'freeo/vim-kalisi'
 Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim'
+Plug 'chriskempson/base16-vim'
 
 " Languages/Libraries
 Plug 'flowtype/vim-flow'
