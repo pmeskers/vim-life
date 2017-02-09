@@ -9,8 +9,6 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 map <leader>C :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 
 " General settings
-let mapleader = ","     " Use comma as leader
-
 set number              " Line numbers always on
 
 set tabstop=2           " Set width of tabs
