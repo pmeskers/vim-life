@@ -39,6 +39,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'styled-components/vim-styled-components'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'elixir-lang/vim-elixir'
 
 " Initialize plugin system
 call plug#end()
