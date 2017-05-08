@@ -33,6 +33,7 @@ Plug 'chriskempson/base16-vim'
 
 " Languages/Libraries
 Plug 'tpope/vim-endwise'
+Plug 'fgsch/vim-varnish'
 
 " Initialize plugin system
 call plug#end()
