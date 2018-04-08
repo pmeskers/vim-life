@@ -40,6 +40,7 @@ Plug 'styled-components/vim-styled-components'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elixir-lang/vim-elixir'
+Plug 'tbastos/vim-lua'
 
 " Initialize plugin system
 call plug#end()
