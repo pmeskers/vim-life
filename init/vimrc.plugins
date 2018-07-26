@@ -13,6 +13,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Text editing
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdcommenter'
 Plug 'YankRing.vim'
 Plug 'Valloric/YouCompleteMe'
