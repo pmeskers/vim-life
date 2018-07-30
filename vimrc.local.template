@@ -5,9 +5,6 @@ colorscheme nord
 set guifont=Source\ Code\ Pro:h17    " font/size
 set guioptions-=rL        " remove scrollbars
 
-" Flow settings
-let g:flow#enable = 1
-
 " Experimental tab settings
 nnoremap <C-t> :tabnew<CR>
 inoremap <C-t> <Esc>:tabnew<CR>
