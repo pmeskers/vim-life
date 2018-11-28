@@ -18,6 +18,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'Valloric/YouCompleteMe'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'ervandew/supertab'
+
 " UI modifications
 Plug 'vim-airline/vim-airline'
 
@@ -76,6 +80,17 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Supertab
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+
+" Snippet settings
+let g:UltiSnipsExpandTrigger           = '<tab>'
+let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
 " YCM Configuration
 " This turns the 'filepath completer' on for .jsx files, which is disabled by
 " default.
@@ -83,3 +98,5 @@ let g:ycm_filepath_blacklist = {
       \ 'html' : 1,
       \ 'xml' : 1
       \}
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
