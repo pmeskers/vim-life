@@ -23,6 +23,9 @@ rm -f ~/.vimrc.local
 # install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# and again for nvim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # link our vim configurations
 ln -s `pwd`/vimrc ~/.vimrc
@@ -37,10 +40,10 @@ vim -c ":PlugInstall" -c ":qa!"
 # copy our local starting template
 cp `pwd`/vimrc.local.template ~/.vimrc.local
 
-# install YouCompleteMe
-brew install cmake
-cd ~/.vim/plugged/YouCompleteMe
-./install.py
+# install YouCompleteMe (Disabling for being terrible)
+#brew install cmake
+#cd ~/.vim/plugged/YouCompleteMe
+#./install.py
 
 # change iTerm colorscheme
 printf "\n\nnote: if using the nord-vim colorscheme, iTerm accompaniment recommended!"
