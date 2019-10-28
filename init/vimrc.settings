@@ -28,7 +28,9 @@ set swapfile                                " Keep swapfiles in clean place
 set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 
-set nofoldenable       " Turn off folding, for now
+set termguicolors       " Enable more colors
+
+set nofoldenable        " Turn off folding, for now
 
 " Whitespace cleanup
 " Strip trailing whitespace files on save
