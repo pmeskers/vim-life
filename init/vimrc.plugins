@@ -16,7 +16,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/YankRing.vim'
-Plug 'Valloric/YouCompleteMe'
+"YCM only supports MacVim and often _crashes_ regular vim, use at own peril
+"Plug 'Valloric/YouCompleteMe'
 
 " Snippets
 Plug 'SirVer/ultisnips'
