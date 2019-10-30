@@ -42,7 +42,7 @@ Plug 'tpope/vim-endwise'
 Plug 'fgsch/vim-varnish'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'mxw/vim-jsx'
 Plug 'elixir-lang/vim-elixir'
 Plug 'tbastos/vim-lua'
@@ -67,6 +67,11 @@ let g:yankring_replace_n_nkey = '<C-S-Tab>'
 " Ctrl-P settings
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage'
 let g:ctrlp_max_files = 20000
+
+" jelera/vim-javascript-syntax template strings
+hi link javaScriptTemplateDelim String
+hi link javaScriptTemplateVar Text
+hi link javaScriptTemplateString String
 
 " The Silver Searcher configuration for grep/Ctrl-P
 if executable('ag')
