@@ -95,9 +95,9 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 " YCM Configuration
 " This turns the 'filepath completer' on for .jsx files, which is disabled by
 " default.
-let g:ycm_filepath_blacklist = {
-      \ 'html' : 1,
-      \ 'xml' : 1
-      \}
-let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+"let g:ycm_filepath_blacklist = {
+      "\ 'html' : 1,
+      "\ 'xml' : 1
+      "\}
+"let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
