@@ -30,6 +30,7 @@ Plug 'freeo/vim-kalisi'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim'
 Plug 'chriskempson/base16-vim'
+Plug 'adrian5/oceanic-next-vim'
 
 " Languages/Libraries
 Plug 'tpope/vim-endwise'
