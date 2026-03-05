@@ -8,14 +8,15 @@ Plug 'tpope/vim-sensible'
 
 " File management
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Text editing
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-scripts/YankRing.vim'
+Plug 'svermeulen/vim-yoink'
 
 " UI modifications
 Plug 'vim-airline/vim-airline'
@@ -39,8 +40,10 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jelera/vim-javascript-syntax'
 Plug 'mxw/vim-jsx'
-Plug 'elixir-lang/vim-elixir'
-Plug 'tbastos/vim-lua'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'vim-ruby/vim-ruby'
+Plug 'preservim/vim-markdown'
 
 " Initialize plugin system
 call plug#end()
@@ -55,29 +58,25 @@ map \|     :NERDTreeFind<CR>
 " Nerdcommenter settings
 map <leader>/  <plug>NERDCommenterToggle
 
-" YankRing settings
-let g:yankring_replace_n_pkey = '<C-Tab>'
-let g:yankring_replace_n_nkey = '<C-S-Tab>'
+" vim-yoink settings
+nmap p <plug>(YoinkPaste_p)
+nmap P <plug>(YoinkPaste_P)
 
-" Ctrl-P settings
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage'
-let g:ctrlp_max_files = 20000
+" fzf settings
+map <C-p>      :Files<CR>
+map <leader>b  :Buffers<CR>
+map <leader>g  :Rg<CR>
+
+" vim-markdown settings
+let g:vim_markdown_folding_disabled = 1
 
 " jelera/vim-javascript-syntax template strings
 hi link javaScriptTemplateDelim String
 hi link javaScriptTemplateVar Text
 hi link javaScriptTemplateString String
 
-" The Silver Searcher configuration for grep/Ctrl-P
-if executable('ag')
-" Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects
-  " .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+" ripgrep configuration for grep/fzf
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --smart-case
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git"'
 endif
-

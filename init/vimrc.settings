@@ -86,5 +86,3 @@ if exists("+showtabline")
     highlight link TabNum Special
 endif
 
-" Pico-8 LUA config
-autocmd BufNewFile,BufRead *.p8   set syntax=lua
