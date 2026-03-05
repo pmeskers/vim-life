@@ -78,5 +78,5 @@ hi link javaScriptTemplateString String
 " ripgrep configuration for grep/fzf
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --smart-case
-  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git"'
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git" --glob "!.yarn"'
 endif
