@@ -1,15 +1,26 @@
+#!/usr/bin/env bash
 # exit on error
 set -e
 
-# sanity check directory
-if [[ `pwd` != *vim-life ]]
-then
-  echo 'hey, you gotta run this from the vim-life directory. sorry.'
-  exit
+# run from script directory regardless of where it's called from
+cd "$(dirname "$0")"
+
+# check dependencies
+if ! command -v rg &> /dev/null; then
+  echo "error: ripgrep (rg) is required but not installed."
+  echo "  brew install ripgrep"
+  exit 1
 fi
 
-# pull in the latest changes
-git pull -r
+echo "==> Pulling latest changes..."
+git pull
 
-# run vim and install our plugins
-vim -c ":PlugInstall" -c ":qa!"
+echo "==> Updating plugins..."
+if command -v vim &> /dev/null; then
+  vim -c ":PlugInstall" -c ":PlugUpdate" -c ":qa!"
+else
+  nvim -c ":PlugInstall" -c ":PlugUpdate" -c ":qa!"
+fi
+
+echo ""
+echo "Done!"

@@ -1,5 +1,5 @@
 " Visual settings
-colorscheme nord
+silent! colorscheme nord
 
 " MacVim settings
 set guifont=Source\ Code\ Pro:h17    " font/size
